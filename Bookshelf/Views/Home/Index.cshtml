@@ -5,6 +5,14 @@
     }
 <div ng-app="bookShelf">
     <div ng-controller="ListController as lc"> @*To avoid assigning properties directly to $scope, we use a named controller!*@
-        {{lc.message}} 
+        <table>
+            <tr ng-repeat="book in lc.books">
+                <td>{{book.ISBN}}</td>
+                <td>{{book.Title}}</td>
+                <td>{{book.Author}}</td>
+                <td>{{book.PublishYear}}</td>
+                <td>{{book.Copies}}</td>
+            </tr>
+        </table>
     </div>
 </div>
