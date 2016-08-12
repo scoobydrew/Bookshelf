@@ -10,4 +10,6 @@
             </td>
         </tr>
     </table>
+    <button class="btn btn-default" ng-click="lc.create()">Create</button>
+    <div ng-include="'/App/Views/edit.html'" ng-controller="EditController as ec" onload="ec.parent = lc"></div>
 </div>

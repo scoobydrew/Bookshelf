@@ -229,8 +229,10 @@
     <Content Include="App\Scripts\bookShelf.js" />
     <Content Include="App\Scripts\BooksService.js" />
     <Content Include="App\Scripts\DetailsController.js" />
+    <Content Include="App\Scripts\EditController.js" />
     <Content Include="App\Scripts\ListController.js" />
     <Content Include="App\Views\details.html" />
+    <Content Include="App\Views\edit.html" />
     <Content Include="App\Views\list.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />

@@ -3,4 +3,6 @@
     <div>By {{dc.book.Author}}</div>
     <div>Published in {{dc.book.PublishYear}}</div>
     <div>Copies available: {{dc.book.Copies}}</div>
+    <button ng-click="dc.edit()">Edit</button>
+    <div ng-include="'/App/Views/edit.html'" ng-controller="EditController as ec" onload="ec.parent = dc"></div>
 </div>

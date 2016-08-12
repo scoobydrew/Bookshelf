@@ -6,6 +6,19 @@
             .then(function (response) {
                 self.books = response.data;
             });
+
+        this.create = function () {
+            self.edit = {
+                book: {
+                    ISBN: "",
+                    Title: "",
+                    Author: "",
+                    PublishYear: new Date().getFullYear(),
+                    Copies: 1
+                }
+            };
+        }
+
         this.delete = function (book) {
             booksService.destroy(book)
                 .then(function () {

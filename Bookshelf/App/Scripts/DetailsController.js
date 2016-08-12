@@ -7,6 +7,9 @@
             .then((response) => {
                 self.book = response.data;
             });
+        this.edit = function () {
+            self.edit.book = angular.copy(self.book);
+        };
     };
     DetailsController.$inject = ['$scope', '$routeParams', 'booksService'];
 
