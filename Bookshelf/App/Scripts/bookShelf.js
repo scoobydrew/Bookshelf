@@ -10,4 +10,5 @@
                 { redirectTo: "/list" });
     }
     app.config(config);
+    app.constant("booksApiUrl", "/api/books/")
 }());

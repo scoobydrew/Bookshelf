@@ -227,6 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\Scripts\bookShelf.js" />
+    <Content Include="App\Scripts\BooksService.js" />
     <Content Include="App\Scripts\DetailsController.js" />
     <Content Include="App\Scripts\ListController.js" />
     <Content Include="App\Views\details.html" />
