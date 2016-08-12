@@ -1,6 +1,13 @@
 ﻿(function () {
-    var app = angular.module("bookShelf", []);
+    let app = angular.module("bookShelf", ["ngRoute"]); // Including the routing library means that we introduce a dependency to our app
+    let config = function ($routeProvider) {
+        $routeProvider
+            .when("/list",
+                { templateUrl: "/app/views/list.html" })
+            .when("/details/:isbn",
+                { templateUrl: "/app/views/details.html" })
+            .otherwise(
+                { redirectTo: "/list" });
+    }
+    app.config(config);
 }());
-
-// ng-app is equivalent to manually bootstrapping:
-// angular.bootstrap(document.getElementsByClassName('bookShelf-module'), ['bookShelf']);

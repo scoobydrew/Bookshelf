@@ -1,0 +1,11 @@
+﻿<div ng-controller="ListController as lc">
+    <table>
+        <tr ng-repeat="book in lc.books">
+            <td>{{book.ISBN}}</td>
+            <td>{{book.Title}}</td>
+            <td>
+                <a href="#/details/{{book.ISBN}}">Details</a>
+            </td>
+        </tr>
+    </table>
+</div>

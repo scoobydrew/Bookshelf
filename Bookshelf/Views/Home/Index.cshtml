@@ -1,18 +1,10 @@
 ﻿@section scripts {
     <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
     <script src="~/App/Scripts/bookShelf.js"></script>
     <script src="~/App/Scripts/ListController.js"></script>
-    }
+    <script src="~/App/Scripts/DetailsController.js"></script>
+}
 <div ng-app="bookShelf">
-    <div ng-controller="ListController as lc"> @*To avoid assigning properties directly to $scope, we use a named controller!*@
-        <table>
-            <tr ng-repeat="book in lc.books">
-                <td>{{book.ISBN}}</td>
-                <td>{{book.Title}}</td>
-                <td>{{book.Author}}</td>
-                <td>{{book.PublishYear}}</td>
-                <td>{{book.Copies}}</td>
-            </tr>
-        </table>
-    </div>
+    <ng-view></ng-view>
 </div>
