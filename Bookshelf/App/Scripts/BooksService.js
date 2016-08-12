@@ -24,6 +24,4 @@
         };
     };
     app.factory('booksService', booksService);
-}(angular.module('bookShelf')))
-
-// This is an example of building our own service like $http.  We can pass it to controllers in the same way.
+}(angular.module('bookShelf')));

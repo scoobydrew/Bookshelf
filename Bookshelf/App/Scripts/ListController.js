@@ -6,6 +6,22 @@
             .then(function (response) {
                 self.books = response.data;
             });
+        this.delete = function (book) {
+            booksService.destroy(book)
+                .then(function () {
+                    removeBookByISBN(book.ISBN);
+                });
+        };
+        let removeBookByISBN = function (isbn) {
+            let i = 0;
+            for(let book of self.books) {
+                if (book.ISBN === isbn) {
+                    self.books.splice(i, 1);
+                    break;
+                }
+                i++;
+            }
+        }
     };
     ListController.$inject = ['$scope', 'booksService'];
     app.controller("ListController", ListController);

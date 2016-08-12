@@ -1,10 +1,12 @@
 ﻿<div ng-controller="ListController as lc">
-    <table>
+    <h2>Book Shelf</h2>
+    <table class="table">
         <tr ng-repeat="book in lc.books">
             <td>{{book.ISBN}}</td>
             <td>{{book.Title}}</td>
             <td>
-                <a href="#/details/{{book.ISBN}}">Details</a>
+                <a class="btn btn-default" href="#/details/{{book.ISBN}}">Details</a>
+                <button class="btn btn-default" ng-click="lc.delete(book)">Delete</button>
             </td>
         </tr>
     </table>
